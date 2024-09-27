@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discussion Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+   
+        <div class="left-pane">
+            <button id="newQuestionBtn" class="btn">New Question Form</button>
+            <input type="text" id="searchQuestions" placeholder="Search questions..." oninput="searchQuestions()">
+            <div id="questionList" class="question-list"></div>
+        </div>
+    
+        <div class="right-pane">
+            <h1>Welcome to Discussion Portal!</h1>
+            <div id="questionForm">
+                <label>Enter a subject and question to get started</label>
+                <input type="text" id="subject" placeholder="Subject (Required)">
+                <textarea id="question" placeholder="Question (Required)"></textarea>
+                <button id="submitQuestion" class="btn">Submit</button>
+            </div>
+    
+            <div id="questionDetail" class="hidden">
+                <h2>Question</h2>
+                <p id="questionTitle"></p>
+                <p id="questionContent"></p>
+                
+                <div class="button-container">
+                    <button id="resolveBtn" class="btn">Resolve</button>
+                </div>
+    
+                <h3>Responses</h3>
+                <div id="responses"></div>
+    
+                <h3>Add Response</h3>
+                <input type="text" id="responseName" placeholder="Enter Name (Required)">
+                <textarea id="responseComment" placeholder="Enter Comment (Required)"></textarea>
+                
+                <div class="response-container">
+                    <button id="submitResponse" class="btn">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script src="script.js"> </script>
+</body>
+</html>
